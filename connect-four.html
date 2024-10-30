@@ -13,6 +13,55 @@
     <title>website project</title>
 </head>
 <body>
+    <div class="container">
+        <div class="jumbotron text-center" style="background-image: url('imgs/connect4.png')">
+          
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+            
+                <a class="navbar-brand" href="index.html">GameSite</a>
+
+                
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tic-tac-toe.html">Tic-Tac-Toe</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="connect-four.html">Connect Four</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="rock-paper-scissors.html">Rock-Paper-Scissors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div id="game">
+            <br>
+            <div id="board"  ></div>
+            <div id="scoreboard">
+                <div>Red Wins: <span id="redScore">0</span></div>
+                <div>Yellow Wins: <span id="yellowScore">0</span></div>
+              </div>
+            <button id="reset">Reset Game</button>
+            <div id="message"></div>
+          </div>
+
+
+
+
+
+          <script src="script.js"></script>
+
 
 
 </body>

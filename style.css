@@ -3,3 +3,57 @@
 }
 
 
+
+
+#game {
+  text-align: center;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(7, 50px);
+  grid-gap: 5px;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+#scoreboard {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.cell {
+  width: 50px;
+  height: 50px;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.cell.red {
+  background-color: #ff4d4d;
+}
+
+.cell.yellow {
+  background-color: #ffd633;
+}
+
+#message {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.cell.preview-red {
+  background-color: rgba(255, 77, 77, 0.5); /* Faint red */
+}
+
+.cell.preview-yellow {
+  background-color: rgba(255, 214, 51, 0.5); /* Faint yellow */
+}
