@@ -9,7 +9,7 @@
  
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
     <title>website project</title>
 </head>
 <div class="container">
@@ -37,19 +37,77 @@
                         <a class="nav-link" href="rock-paper-scissors.html">Rock-Paper-Scissors</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="mine-sweeper.html">Mine Sweeper</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+     
+        #board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            gap: 5px;
+            margin: 20px auto;
+        }
+        .cell {
+            width: 100px;
+            height: 100px;
+            font-size: 2em;
+            text-align: center;
+            line-height: 100px;
+            border: 2px solid #007bff;
+            cursor: pointer;
+            color: #007bff;
+        }
+        .cell.preview {
+            color: #ccc; 
+        }
+        
+        #scoreContainer {
+            display: flex;
+            justify-content: space-between;
+            width: 320px;
+            margin: 10px auto;
+        }
+        #scoreX, #scoreO {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #007bff;
+        }
+    </style>
+</head>
+<body class="bg-light text-center">
+    <div class="container">
+        <h1 class="mt-5">Tic-Tac-Toe</h1>
+        <div id="board" class="my-3"></div>
+        <div id="scoreContainer">
+            <p id="scoreX">Player X: 0 wins</p>
+            <p id="scoreO">Player O: 0 wins</p>
+        </div>
+        <button id="restart" class="btn btn-primary mt-3">Restart Game</button>
+        <p id="status" class="mt-3 font-weight-bold"></p>
+    </div>
+
+    <script src="js/tic.js"></script>
+</body>
+</html>
 
 
 
 
-
-
- <!-- Optional JavaScript -->
  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
  crossorigin="anonymous"></script>

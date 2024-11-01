@@ -11,7 +11,7 @@ const resetButton = document.getElementById('reset');
 const redScoreElement = document.getElementById('redScore');
 const yellowScoreElement = document.getElementById('yellowScore');
 
-// Initialize the board array and create HTML cells
+
 function initBoard() {
   board = Array.from({ length: rows }, () => Array(columns).fill(null));
   boardElement.innerHTML = '';
@@ -28,7 +28,7 @@ function initBoard() {
   messageElement.textContent = `Player ${currentPlayer}'s turn`;
 }
 
-// Handle cell click
+
 function handleCellClick(e) {
   const col = parseInt(e.target.dataset.col);
   for (let row = rows - 1; row >= 0; row--) {
@@ -48,7 +48,7 @@ function handleCellClick(e) {
   }
 }
 
-// Handle cell hover to show a preview piece
+
 function handleCellHover(e) {
   const col = parseInt(e.target.dataset.col);
   for (let row = rows - 1; row >= 0; row--) {
@@ -60,13 +60,13 @@ function handleCellHover(e) {
   }
 }
 
-// Clear preview piece on mouse leave
+
 function clearPreview() {
   const previewCells = document.querySelectorAll('.preview-red, .preview-yellow');
   previewCells.forEach(cell => cell.classList.remove('preview-red', 'preview-yellow'));
 }
 
-// Update board UI
+
 function updateBoard() {
   for (let row = 0; row < rows; row++) {
     for (let col = 0; col < columns; col++) {
@@ -79,7 +79,7 @@ function updateBoard() {
   }
 }
 
-// Check for win
+
 function checkWin(row, col) {
   return checkDirection(row, col, 1, 0) ||
          checkDirection(row, col, 0, 1) ||
@@ -103,7 +103,7 @@ function checkDirection(row, col, rowDir, colDir) {
   return false;
 }
 
-// Update score and display
+
 function updateScore() {
   if (currentPlayer === 'red') {
     redWins++;
@@ -114,7 +114,7 @@ function updateScore() {
   }
 }
 
-// End game by disabling further clicks
+
 function endGame() {
   const cells = document.querySelectorAll('.cell');
   cells.forEach(cell => {
@@ -124,7 +124,7 @@ function endGame() {
   });
 }
 
-// Reset the game
+
 resetButton.addEventListener('click', () => {
   currentPlayer = 'red';
   initBoard();

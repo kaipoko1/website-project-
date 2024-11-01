@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+h1{
+    color:rgb(228, 215, 215);  
+  }
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#score-container {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
+    gap: 2px;
+}
+
+.cell {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e0e0e0;
+    border: 1px solid #999;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cell:hover {
+    background-color: #d0d0d0;
+}
+
+.cell.revealed {
+    background-color: #ffffff;
+    cursor: default;
+}
+
+.cell.mine {
+    background-color: transparent;
+    color: black;
+    font-size: 28px;
+    text-align: center;
+}
+
+.cell.flag {
+    background-color: transparent;
+    color: red;
+    font-size: 28px;
+    text-align: center;
+}
+
+.cell.number-1 { color: blue; }
+.cell.number-2 { color: green; }
+.cell.number-3 { color: red; }
+.cell.number-4 { color: darkblue; }
+.cell.number-5 { color: darkred; }
+.cell.number-6 { color: teal; }
+.cell.number-7 { color: black; }
+.cell.number-8 { color: gray; }
+
+@keyframes sparkle {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(1); }
+}
+
+.cell.sparkle {
+    position: relative;
+    overflow: hidden;
+}
+
+.cell.sparkle::before,
+.cell.sparkle::after {
+    content: '✨';
+    position: absolute;
+    font-size: 16px;
+    animation: sparkle 0.8s infinite;
+    opacity: 0;
+}
+
+.cell.sparkle::before {
+    top: 0;
+    left: 0;
+}
+
+.cell.sparkle::after {
+    bottom: 0;
+    right: 0;
+}
+
+.cell.sparkle:hover::before,
+.cell.sparkle:hover::after {
+    opacity: 1;
+}
+
+button {
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#ratio-display {
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+    margin-top: 5px;
+}
+#mine-count {
+    font-size: 20px;
+    color: #d9534f;
+}
+#win-count, #loss-count {
+    font-weight: bold;
+    font-size: 24px;
+    color: #333;
+    margin-top: 5px;
+}
